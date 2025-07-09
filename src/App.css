@@ -1,0 +1,114 @@
+body {
+  background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+}
+
+.container {
+  background: rgba(20, 30, 48, 0.95);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 3rem 2.5rem;
+  max-width: 420px;
+  margin: 2rem auto;
+  border: 1.5px solid #1e3c72;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 50%, #ff9800 100%);
+  border-radius: 18px 18px 0 0;
+}
+
+h1 {
+  color: #6dd5ed;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  letter-spacing: 1px;
+}
+
+p {
+  color: #b3c6e7;
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Detalle de "línea de código" */
+.container p::before {
+  content: "> ";
+  color: #ff9800;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem 0.5rem;
+    max-width: 98vw;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: rgba(20, 30, 48, 0.98);
+  border-bottom: 2px solid #2193b0;
+  z-index: 100;
+  box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.15);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 1rem 0 0.7rem 0;
+}
+
+.navbar a {
+  color: #6dd5ed;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #ff9800;
+}
+
+.container {
+  margin-top: 5.5rem;
+}
+
+section {
+  margin-bottom: 3.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1.5px dashed #2193b0;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+h2 {
+  color: #2193b0;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+}
