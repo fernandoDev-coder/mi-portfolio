@@ -11,6 +11,7 @@
     "deploy": "npx gh-pages -d dist"
   },
   "dependencies": {
+    "solid-app-router": "^0.4.2",
     "solid-js": "^1.9.7"
   },
   "devDependencies": {
