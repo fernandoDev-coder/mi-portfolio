@@ -13,16 +13,20 @@ body {
   border-radius: 18px;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   padding: 3rem 2.5rem;
-  max-width: 420px;
+  max-width: 900px;
   margin: 2rem auto;
   border: 1.5px solid #1e3c72;
   position: relative;
+  width: min(92vw, 900px);
 }
 
 .container::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; height: 5px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
   background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 50%, #ff9800 100%);
   border-radius: 18px 18px 0 0;
 }
@@ -41,7 +45,7 @@ p {
   margin-bottom: 1.5rem;
 }
 
-/* Detalle de "línea de código" */
+/* Detail for the "code line" feel. */
 .container p::before {
   content: "> ";
   color: #ff9800;
@@ -113,6 +117,46 @@ h2 {
   font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
 }
 
+h3 {
+  color: #6dd5ed;
+  font-size: 1.35rem;
+  margin: 0 0 0.6rem 0;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: rgba(15, 22, 36, 0.92);
+  border: 1px solid #1e3c72;
+  border-radius: 14px;
+  padding: 1.4rem 1.3rem;
+  box-shadow: 0 8px 20px rgba(10, 20, 35, 0.35);
+}
+
+.project-card p {
+  margin-bottom: 1.2rem;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
+  color: #0f2027;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.project-link:hover {
+  filter: brightness(1.08);
+}
+
 form {
   display: flex !important;
   flex-direction: column !important;
@@ -154,4 +198,34 @@ form button {
   border: none;
   cursor: pointer;
   transition: background 0.2s;
+}
+
+.footer {
+  margin: 2rem auto 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(15, 22, 36, 0.92);
+  border: 1px solid #1e3c72;
+  color: #6dd5ed;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer-link:hover {
+  color: #ff9800;
+  border-color: #ff9800;
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
