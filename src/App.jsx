@@ -44,9 +44,35 @@ function App() {
       </nav>
       <div className="container">
         <section id="about">
-          <h1>Hola! Soy Fernando</h1>
-          <p>Bienvenido a mi portafolio personal.</p>
-          {/* Aqui puedes agregar una breve descripcion sobre ti, tus habilidades y experiencia. */}
+          <div className="about-hero">
+            <div className="about-text">
+              <h1>Hola! Soy Fernando</h1>
+              <p>Bienvenido a mi portafolio personal.</p>
+              <a
+                className="linkedin-button"
+                href="https://www.linkedin.com/in/fernando-lara-mill%C3%A1n-754402282/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  className="linkedin-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path d="M20.45 20.45h-3.55v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85v5.5H9.47V9h3.41v1.56h.05c.47-.9 1.6-1.85 3.3-1.85 3.53 0 4.18 2.33 4.18 5.36v6.38zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/>
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+              {/* Aqui puedes agregar una breve descripcion sobre ti, tus habilidades y experiencia. */}
+            </div>
+            <img
+              className="about-photo"
+              src={`${import.meta.env.BASE_URL}images/fotoperfil.jpeg`}
+              alt="Foto de Fernando"
+            />
+          </div>
         </section>
         <section id="projects">
           <h2>Proyectos</h2>
@@ -126,23 +152,7 @@ function App() {
         </section>
       </div>
       <footer className="footer">
-        <a
-          className="footer-link"
-          href="https://www.linkedin.com/in/fernando-lara-mill%C3%A1n-754402282/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-        >
-          <svg
-            className="footer-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path d="M20.45 20.45h-3.55v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85v5.5H9.47V9h3.41v1.56h.05c.47-.9 1.6-1.85 3.3-1.85 3.53 0 4.18 2.33 4.18 5.36v6.38zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/>
-          </svg>
-          <span>LinkedIn</span>
-        </a>
+        <span>Gracias por visitar mi portafolio.</span>
       </footer>
     </>
   )

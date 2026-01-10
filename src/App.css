@@ -124,6 +124,51 @@ h3 {
   font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
 }
 
+.about-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1 1 320px;
+}
+
+.about-photo {
+  width: 220px;
+  max-width: 40vw;
+  border-radius: 16px;
+  border: 2px solid #1e3c72;
+  box-shadow: 0 10px 24px rgba(10, 20, 35, 0.45);
+  background: #0f2027;
+}
+
+.linkedin-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(15, 22, 36, 0.92);
+  border: 1px solid #1e3c72;
+  color: #6dd5ed;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.linkedin-button:hover {
+  color: #ff9800;
+  border-color: #ff9800;
+}
+
+.linkedin-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -200,32 +245,22 @@ form button {
   transition: background 0.2s;
 }
 
+@media (max-width: 600px) {
+  .about-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-photo {
+    width: 180px;
+  }
+}
+
 .footer {
-  margin: 2rem auto 2.5rem;
-  display: flex;
-  justify-content: center;
-}
-
-.footer-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.6rem 1.1rem;
-  border-radius: 999px;
-  background: rgba(15, 22, 36, 0.92);
-  border: 1px solid #1e3c72;
+  margin: 1.5rem auto 2.5rem;
+  padding-top: 1rem;
+  text-align: center;
   color: #6dd5ed;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.footer-link:hover {
-  color: #ff9800;
-  border-color: #ff9800;
-}
-
-.footer-icon {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
+  font-weight: 600;
+  border-top: 1px solid #1e3c72;
 }
