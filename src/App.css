@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+  background: linear-gradient(135deg, #f5efe4 0%, #e8dbc7 100%);
   min-height: 100vh;
   margin: 0;
   display: flex;
@@ -9,30 +9,23 @@ body {
 }
 
 .container {
-  background: rgba(20, 30, 48, 0.95);
+  background: rgba(255, 250, 242, 0.96);
   border-radius: 18px;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   padding: 3rem 2.5rem;
   max-width: 900px;
   margin: 2rem auto;
-  border: 1.5px solid #1e3c72;
+  border: 1.5px solid #b99f7a;
   position: relative;
   width: min(92vw, 900px);
 }
 
 .container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 50%, #ff9800 100%);
-  border-radius: 18px 18px 0 0;
+  content: none;
 }
 
 h1 {
-  color: #6dd5ed;
+  color: #5c7f5c;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
@@ -40,15 +33,14 @@ h1 {
 }
 
 p {
-  color: #b3c6e7;
+  color: #5a4a3b;
   font-size: 1.15rem;
   margin-bottom: 1.5rem;
 }
 
-/* Detail for the "code line" feel. */
 .container p::before {
   content: "> ";
-  color: #ff9800;
+  color: #7a5e3f;
   font-weight: bold;
 }
 
@@ -57,6 +49,7 @@ p {
     padding: 1.5rem 0.5rem;
     max-width: 98vw;
   }
+
   h1 {
     font-size: 2rem;
   }
@@ -67,8 +60,8 @@ p {
   top: 0;
   left: 0;
   width: 100vw;
-  background: rgba(20, 30, 48, 0.98);
-  border-bottom: 2px solid #2193b0;
+  background: rgba(255, 250, 242, 0.98);
+  border-bottom: 2px solid #c5a985;
   z-index: 100;
   box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.15);
 }
@@ -83,7 +76,7 @@ p {
 }
 
 .navbar a {
-  color: #6dd5ed;
+  color: #5c7f5c;
   text-decoration: none;
   font-size: 1.1rem;
   font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
@@ -93,7 +86,7 @@ p {
 }
 
 .navbar a:hover {
-  color: #ff9800;
+  color: #7a5e3f;
 }
 
 .container {
@@ -103,7 +96,7 @@ p {
 section {
   margin-bottom: 3.5rem;
   padding-bottom: 2rem;
-  border-bottom: 1.5px dashed #2193b0;
+  border-bottom: 1.5px dashed #c5a985;
 }
 
 section:last-child {
@@ -111,14 +104,14 @@ section:last-child {
 }
 
 h2 {
-  color: #2193b0;
+  color: #6e8a6e;
   font-size: 2rem;
   margin-bottom: 1rem;
   font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
 }
 
 h3 {
-  color: #6dd5ed;
+  color: #6e8a6e;
   font-size: 1.35rem;
   margin: 0 0 0.6rem 0;
   font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
@@ -140,9 +133,84 @@ h3 {
   width: 220px;
   max-width: 40vw;
   border-radius: 16px;
-  border: 2px solid #1e3c72;
+  border: 2px solid #c5a985;
   box-shadow: 0 10px 24px rgba(10, 20, 35, 0.45);
-  background: #0f2027;
+  background: #f5efe4;
+}
+
+.about-bio {
+  margin-top: 1.5rem;
+}
+
+.about-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.about-toggle {
+  --pad: 0.3rem;
+  --gap: 0.4rem;
+
+  position: relative;
+  display: inline-flex;
+  gap: var(--gap);
+  padding: var(--pad);
+  border-radius: 999px;
+  border: 1px solid #c5a985;
+  background: rgba(245, 239, 228, 0.95);
+  margin-bottom: 0;
+}
+
+.about-toggle::before {
+  content: "";
+  position: absolute;
+  top: var(--pad);
+  bottom: var(--pad);
+  left: var(--pad);
+
+  width: calc((100% - (var(--pad) * 2) - var(--gap)) / 2);
+
+  border-radius: 999px;
+  background: #8fb48f;
+  transition: transform 0.25s ease;
+}
+
+.about-toggle.en::before {
+  transform: translateX(calc(100% + var(--gap)));
+}
+
+.about-toggle button {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  color: #5c7f5c;
+  border: none;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+
+  flex: 1 1 0;
+  min-width: 3.2rem;
+  text-align: center;
+}
+
+.about-toggle button.is-active {
+  color: #3f3124;
+}
+
+.about-bio ul {
+  margin: 0 0 1.5rem;
+  padding-left: 1.2rem;
+  color: #5a4a3b;
+}
+
+.about-bio li {
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
 }
 
 .linkedin-button {
@@ -151,16 +219,16 @@ h3 {
   gap: 0.6rem;
   padding: 0.6rem 1.1rem;
   border-radius: 999px;
-  background: rgba(15, 22, 36, 0.92);
-  border: 1px solid #1e3c72;
-  color: #6dd5ed;
+  background: rgba(245, 239, 228, 0.95);
+  border: 1px solid #c5a985;
+  color: #5c7f5c;
   text-decoration: none;
   font-weight: 700;
 }
 
 .linkedin-button:hover {
-  color: #ff9800;
-  border-color: #ff9800;
+  color: #7a5e3f;
+  border-color: #7a5e3f;
 }
 
 .linkedin-icon {
@@ -176,8 +244,8 @@ h3 {
 }
 
 .project-card {
-  background: rgba(15, 22, 36, 0.92);
-  border: 1px solid #1e3c72;
+  background: rgba(255, 250, 242, 0.96);
+  border: 1px solid #c5a985;
   border-radius: 14px;
   padding: 1.4rem 1.3rem;
   box-shadow: 0 8px 20px rgba(10, 20, 35, 0.35);
@@ -191,8 +259,8 @@ h3 {
   display: inline-block;
   padding: 0.55rem 1rem;
   border-radius: 999px;
-  background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
-  color: #0f2027;
+  background: linear-gradient(90deg, #8fb48f 0%, #6e8a6e 100%);
+  color: #2f241b;
   text-decoration: none;
   font-weight: 700;
   font-size: 0.95rem;
@@ -208,14 +276,14 @@ form {
   gap: 1.2rem;
 }
 
-form > div {
+form>div {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
 
 form label {
-  color: #6dd5ed;
+  color: #6e8a6e;
   font-weight: 600;
 }
 
@@ -224,10 +292,10 @@ form textarea {
   width: 100%;
   padding: 0.7rem;
   border-radius: 6px;
-  border: 1px solid #2193b0;
+  border: 1px solid #c5a985;
   font-size: 1rem;
-  background: #1a2233;
-  color: #fff;
+  background: #fffaf2;
+  color: #2f241b;
   box-sizing: border-box;
 }
 
@@ -237,8 +305,8 @@ form button {
   padding: 0.8rem;
   font-size: 1.1rem;
   border-radius: 8px;
-  background: #6dd5ed;
-  color: #222;
+  background: #8fb48f;
+  color: #2f241b;
   font-weight: 700;
   border: none;
   cursor: pointer;
@@ -260,7 +328,7 @@ form button {
   margin: 1.5rem auto 2.5rem;
   padding-top: 1rem;
   text-align: center;
-  color: #6dd5ed;
+  color: #5c7f5c;
   font-weight: 600;
-  border-top: 1px solid #1e3c72;
+  border-top: 1px solid #c5a985;
 }
