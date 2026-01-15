@@ -46,7 +46,7 @@ function App() {
         <section id="about">
           <h1>Hola! Soy Fernando</h1>
           <p>Bienvenido a mi portafolio personal.</p>
-          {/* Aqui puedes agregar una breve descripcion sobre ti, tus habilidades y experiencia. */}
+          {/**/}
         </section>
         <section id="projects">
           <h2>Proyectos</h2>
