@@ -216,8 +216,7 @@ const content = {
     contactKicker: 'Contacto',
     contactTitle: 'Contacto profesional.',
     directChannels: 'Hablemos',
-    contactCopy:
-      'Si quieres contactar conmigo, aquí tienes un par de canales directos. Mi correo es fernandolaramillan@gmail.com.',
+    contactCopy: 'Si quieres contactar conmigo, aquí tienes un par de canales directos.',
     contactLinks: [
       { label: 'Email', value: 'fernandolaramillan@gmail.com', href: 'mailto:fernandolaramillan@gmail.com' },
       { label: 'GitHub', value: 'github.com/fernandoDev-coder', href: 'https://github.com/fernandoDev-coder' },
@@ -387,8 +386,7 @@ const content = {
     contactKicker: 'Contact',
     contactTitle: 'Professional contact.',
     directChannels: 'Get in touch',
-    contactCopy:
-      'If you would like to get in touch, here are a couple of direct channels. My email is fernandolaramillan@gmail.com.',
+    contactCopy: 'If you would like to get in touch, here are a couple of direct channels.',
     contactLinks: [
       { label: 'Email', value: 'fernandolaramillan@gmail.com', href: 'mailto:fernandolaramillan@gmail.com' },
       { label: 'GitHub', value: 'github.com/fernandoDev-coder', href: 'https://github.com/fernandoDev-coder' },
